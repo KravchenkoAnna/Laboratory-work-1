@@ -15,18 +15,18 @@ namespace Lab1 {
             Console.WriteLine("\nGame account for " + username + "\n");
             int goal1 = 20;
             Console.WriteLine("The game goal is " + goal1 + "\n");
-
-
+            int tempCounter = 0;
+            
             GameAccount first = new GameAccount(username);
 
 
             first.WinGame("Football game", goal1, username, opponentname);
             Console.WriteLine("{0}`s rating is {1}", username, first.CurrentRating);
-            Console.WriteLine("{0} had {1} game(s) played", username, first.GamesCount);
+            
             Console.WriteLine();
             first.LoseGame("Football game", goal1, username, opponentname);
             Console.WriteLine("{0}`s rating is {1}", username, first.CurrentRating);
-            Console.WriteLine("{0} had {1} game(s) played\n", username, first.GamesCount);
+            
             Console.WriteLine("Roland`s plaing history:\n");
             Console.WriteLine(first.GetHistory());
 
@@ -39,12 +39,12 @@ namespace Lab1 {
 
 
             second.WinGame("Tennis game", goal2, opponentname, username);
-            Console.WriteLine("{0}`s rating is {1}", username, second.CurrentRating);
-            Console.WriteLine("{0} had {1} game(s) played", opponentname, second.GamesCount);
+            Console.WriteLine("{0}`s rating is {1}", opponentname, second.CurrentRating);
+            
             Console.WriteLine();
             second.LoseGame("Tennis game", goal2, opponentname, username);
-            Console.WriteLine("{0}`s rating is {1}", username, second.CurrentRating);
-            Console.WriteLine("{0} had {1} game(s) played\n", opponentname, second.GamesCount);
+            Console.WriteLine("{0}`s rating is {1}", opponentname, second.CurrentRating);
+            
             Console.WriteLine("Bob`s plaing history:\n");
             Console.WriteLine(second.GetHistory());
 
